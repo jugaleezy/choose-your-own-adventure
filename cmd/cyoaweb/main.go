@@ -9,7 +9,7 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/jugaleezy/go-cyoa"
+	cyoa "github.com/jugaleezy/choose-your-own-adventure"
 )
 
 func main() {
@@ -39,8 +39,9 @@ func main() {
 	)
 	mux := http.NewServeMux()
 	mux.Handle("/story/", h)
+	mux.Handle("/", cyoa.NewHandler(story))
 	fmt.Printf("Starting the server on port: %d\n", *port)
-	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%d", *port), h))
+	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%d", *port), mux))
 }
 
 func pathFn(r *http.Request) string {
