@@ -1,3 +1,3 @@
-module github.com/jugaleezy/go-cyoa
+module github.com/jugaleezy/choose-your-own-adventure
 
 go 1.23.2
