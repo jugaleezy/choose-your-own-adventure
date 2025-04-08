@@ -9,14 +9,20 @@ Reference - https://github.com/gophercises/cyoa
 - http template
 - http ServeMux
 - functional options pattern
+- go routine (in cli version)
 
 <br>
 
-Run the file <br>
-`go run ./cmd/cyoaweb/main.go`
+To run the web app version<br>
+`go run ./cmd/cyoa-web/main.go`
 
 <br>
 
 Test the web app at <br>
 `localhost:3000/` <br>
 `localhost:3000/story/` <br>
+
+<br>
+
+To run the cli version<br>
+`go run ./cmd/cyoa-cli/main.go`<br>
